@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap');
+
+/* background: linear-gradient(115deg, #004ff9, #000000); */
+
+/* ///////////////////// Utility Classes //////////////////////// */
+.yellowhover:hover {
+    background-color: #01344D;
+}
+
+.bluehover:hover {
+    background-color: #EFA115;
+}
+
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Encode Sans Expanded", sans-serif;
+    font-size: 62.5%;
+}
+
+.container-big {
+    max-width: 1400px;
+    margin: auto;
+    /* border: 2px solid green; */
+}
+
+.container-small {
+    max-width: 800px;
+    margin: auto;
+    /* border: 2px solid green; */
+}
+
+.border {
+    /* border: 2px solid red; */
+}
+
+.border2 {
+    /* border: 2px solid yellow; */
+}
+
+/* \\\\\\\\\\\\\\\\\\\\\\ Setting Body Layout Grid \\\\\\\\\\\\\\\\\\\\\\\\\ */
+body {
+    display: grid;
+}
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+
+
+/* \\\\\\\\\\\\\\\\\\\\\\\\\\\ Header Styling \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
+.header {
+    background-color: #F6F5F5;
+    box-shadow: 0px 5px 10px 0px #5a5959;
+    z-index: 15;
+    position: sticky;
+    top: 0px;
+    /* opacity: 0.90%; */
+}
+
+
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+}
+
+.logo {
+    width: 250px;
+    height: auto;
+}
+
+.menu {
+    align-self: center;
+    font-size: 2.5rem;
+    padding: 2rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 1rem 1rem;
+    background-color: #01344D;
+    border-radius: 10px;
+    margin-right: 1rem;
+}
+
+/* /////////////////////////////////////  Calculate Styling /////////////////////// */
+.calculator {
+    background-color: #01344D;
+}
+
+.cal-flex {
+    display: flex;
+    font-size: 4rem;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+    box-shadow: 0px 5px 10px 0px #5a5959;
+
+}
+
+.cal-left {
+    width: 50%;
+}
+
+.cal-right {
+    width: 50%;
+    background-color: white;
+    display: none;
+}
+
+
+/* /////////////////////////////////// Card Left Styling ////////////////////// */
+.cal-left {
+    padding: 2rem;
+    background-color: white;
+}
+
+.cal-left h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.cal-left p {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    /* color: white; */
+    margin-bottom: 5rem;
+}
+
+
+
+.cal-left input {
+    display: block;
+    background-color: #D9D9D9;
+    outline: none;
+    border: 0px;
+    padding: 1rem;
+    margin-bottom: 3rem;
+    border-radius: 8px;
+    font-size: 2rem;
+    width: 100%;
+}
+
+.cal-left .change-btn {
+    outline: none;
+    text-decoration: none;
+    background-color: #FEA910;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+.cal-left .cal-btn {
+    font-size: 2rem;
+    text-decoration: none;
+    background-color: #FEA910;
+    color: white;
+    padding: 1rem 2rem;
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    text-align: center;
+}
+
+
+/* ////////////////////////// Right Card Styling ///////////////////// */
+.cal-right {
+    padding: 2rem;
+
+    /* for download btn  */
+    position: relative;
+}
+
+.cal-right img {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: auto;
+    margin-top: 1rem;
+
+}
+
+.bill {
+    display: flex;
+    /* font-size: 3rem; */
+    margin-top: 2rem;
+    /* padding: 1rem; */
+}
+
+.bill-left {
+    width: 40%;
+}
+
+.bill-left h1 {
+    font-size: 1.5rem;
+    margin: 1rem 1rem;
+    font-weight: 600;
+    /* padding-left: ; */
+
+}
+
+.bill-right p {
+    font-size: 1.5rem;
+    margin: 1rem 1rem;
+    font-weight: 400;
+
+
+}
+
+.white-bg {
+    background-color: white;
+}
+
+.cal-right .note {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    padding: 1rem;
+    font-weight: 500;
+    text-decoration: underline;
+    margin-bottom: 1.5rem;
+}
+
+.bill-right {
+    width: 60%;
+}
+
+.cal-right .down {
+    width: 40px;
+    height: auto;
+    position: absolute;
+    top: 20px;
+    right: 60px;
+}
+
+
+
+.cal-right .cal-btn {
+    font-size: 2rem;
+    text-decoration: none;
+    background-color: #FEA910;
+    color: white;
+    padding: 1rem 2rem;
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    text-align: center;
+}
+
+
+/* ///////////////////////// Footer Styling /////////////////////////////// */
+.footer {
+    background-color: #F6F5F5;
+    box-shadow: 0px 5px 10px 0px #5a5959;
+    z-index: 15;
+    position: sticky;
+    top: 0px;
+    /* opacity: 0.90%; */
+}
+
+
+
+
+.copyright {
+
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 2rem;
+}
+
+
+
+/* //////////////////////////////////////////// Media Quirirs /////////////////////////////////////////////////// */
+@media (max-width: 852px) {
+
+    .logo {
+        /* padding-left: 2rem; */
+    }
+
+    .cal-flex
+    {
+        flex-direction: column;
+    }
+
+    .cal-left
+    {
+        /* margin: 0.5rem; */
+    }
+
+    .cal-left, .cal-right
+    {
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 0px) and (max-width: 575px) {
+    
+    
+
+    .header-flex {
+        flex-direction: column;
+        /* text-align: center   ; */
+    }
+
+    .header-flex img {
+        /* display: block; */
+        margin: auto;
+    }
+
+    .header-flex .menu {
+        margin: auto;
+    }
+    .cal-right   .down
+    {
+        top: 90px;
+    }
+
+    .cal-left h1
+    {
+        font-size: 2rem;
+    }
+
+    
+}
+
+/* @media print 
+{
+    .cal-right .down
+    {
+        /* display: none; */
+    /* } */
+/* } */
+
+
+

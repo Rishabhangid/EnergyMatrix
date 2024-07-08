@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/logo.png">
+    <title>EnergyMatrix || Commercial Calculate</title>
+    <link rel="stylesheet" href="./household.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>
+
+    <!-- ^^^^^^^^^^^^^^^^^^^^^^^ Header Structure ^^^^^^^^^^^^^^^^^^^^ -->
+    <!-- ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ -->
+    <header class="header">
+        <div class="container-big header-flex">
+
+            <img src="./img/final-logo.png" alt="EnergyMatrix Logo" class="logo">
+
+            <div class="menu">
+                <a href="./home.html" class="bluehover">HOME</a>
+                <a href="#" class="bluehover">CONTACT US</a>
+            </div>
+
+        </div>
+    </header>
+
+    <section class="calculator">
+
+        <div class="container-big cal-flex">
+
+            <div class="cal-left border">
+                <h1>COMMERCIAL CONNECTION</h1>
+                <p>10.00/- per Unit</p>
+                <a href="./home.html" class="change-btn">Change Connection Type</a>
+                <form action="post">
+                    <input type="text" name="" id="name" class="input" placeholder="Enter Your Name">
+                    <input type="number" name="" id="unit" class="input" placeholder="Enter No. Of Unit Consumed">
+                    <input type="number" name="" id="due" class="input" placeholder="Due Amount">
+                    <a href="#" class="cal-btn" id="get-data">Calculate</a>
+                </form>
+            </div>
+
+            <div class="cal-right border2  invoice" id="onclickk">
+
+                <img src="./img/final-logo.png" alt="logo">
+                <button onclick="generate()"> <img src="./img/download.png" alt="" class="down"> </button>
+                <div class="bill">
+                    <div class="bill-left">
+                        <h1>Name :</h1>
+                        <h1>Total Units Consumed :</h1>
+                        <h1>Amount Charged Per Unit :</h1>
+                        <h1>Due Amount :</h1>
+                        <h1>Amount Payable :</h1>
+                    </div>
+                    <div class="bill-right">
+                        <p id="namee"></p>
+                        <p id="unitt"></p>
+                        <p id="ratee"></p>
+                        <p id="duee"></p>
+                        <p id="payy"></p>
+                    </div>
+                </div>
+
+                <p class="note">This is the computer generated bill, is not valid for any offical documataion.</p>
+                <!-- <a href="#" class="cal-btn">Pay</a> -->
+                <a href="https://cms.phonepe.com/en/myhelp/getting-started-phonepe/pay-your-bills-phonepe/"
+                    target="_blank" class="cal-btn">Pay</a>
+                <!-- <button onclick="generate()">Downlload</button> -->
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <footer class="footer">
+        <div class="container-big ">
+
+
+
+            <div class="copyright">
+                <p>EnergyMatrix &copy; All Right Reserved.</p>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+    <!-- ////////////////////////// Js ////////////////////////// -->
+    <script>
+
+        function generate() {
+            const element = document.getElementById("onclickk");
+
+            // html2pdf()
+            html2pdf(onclickk, {
+                html2canvas: { scale: 2 },
+            })
+                .from(element)
+                .save();
+        }
+
+        document.getElementById("get-data").onclick = function () {
+            var name;
+            var unit_cunsumed;
+            var due_amount = 0;
+
+            var difference = 0;
+            var amount_paybale = 0;
+
+            var name = document.getElementById("name").value;
+            var unit_cunsumed = document.getElementById("unit").value;
+            var due_amount = document.getElementById("due").value;
+
+
+            amount_paybale = unit_cunsumed * 10.00;
+            amount_paybale = parseFloat(amount_paybale) + parseFloat(due_amount);
+            console.log(amount_paybale);
+
+
+            document.getElementById("onclickk").style.display = "block";
+
+            document.getElementById("namee").innerHTML = name;
+            document.getElementById("unitt").innerHTML = unit_cunsumed + " Units";
+            document.getElementById("ratee").innerHTML = "10.00 Rupees Per Unit";
+            document.getElementById("duee").innerHTML = due_amount + "/-";
+            document.getElementById("payy").innerHTML = amount_paybale + "/-";
+
+
+
+
+
+
+
+
+
+
+        }
+    </script>
+
+</body>
+
+</html>
